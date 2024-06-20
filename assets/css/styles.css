@@ -12,3 +12,19 @@ body{
   padding: 20px;
   
 }
+
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+input[type="text"],
+textarea {
+  width: 80%;
+  margin: 0 auto;
+}
+ 

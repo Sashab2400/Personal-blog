@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.pink-square {
+  background-color: hotpink;
+  padding: 20px;
+  
+}

@@ -6,25 +6,49 @@ body{
     align-items: center;
 }
 
-
-.pink-square {
-  background-color: hotpink;
-  padding: 20px;
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
   
 }
 
+.pink-square {
+  background-color: lightseagreen;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  right: 70%;
+  transform: translate(0%, 50%);
+  
+}
+
+.eth {
+  width: 100%;
+  height: auto;
+
+}
+
+.container2 {
+    text-align: right;
+
+}
+
 form {
-  text-align: center;
+  text-align: right;
 }
 
 label {
   display: block;
-  text-align: left;
+  text-align: right;
+  justify-content: space-between;
+  align-self: flex-start;
 }
 
-input[type="text"],
+content[type="text"],
 textarea {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
+  color: black;
 }
  

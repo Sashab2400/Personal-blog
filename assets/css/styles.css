@@ -6,6 +6,43 @@ body{
     align-items: center;
 }
 
+.dark-mode {
+  width: 500px;
+  height: 200px;
+  position: relative;
+  display: block;
+  background: white;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+.dark-mode:after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(180deg, pink, hotpink);
+  border-radius: 180px;
+  transition: 0.3s;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+input:checked + .dark-mode {
+  background: black;
+}
+input:checked + label:after{
+  right: 210px;
+  transform: translateX(-100px);
+  background: linear-gradient(180deg,blue, pink);
+}
 .container {
   position: relative;
   text-align: center;
@@ -14,7 +51,7 @@ body{
 }
 
 .pink-square {
-  padding: 10px;
+  padding: 30px;
   position: absolute;
   top: 50%;
   right: 70%;
@@ -26,17 +63,26 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%)
+  
 }
 
 .eth {
+  height: 200%;
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  top: 200%;
 
 }
 
 .container2 {
     text-align: right;
-
+    position: relative;
+    color: black;
+    top: 200px;
+    
+    
+    
 }
 
 form {

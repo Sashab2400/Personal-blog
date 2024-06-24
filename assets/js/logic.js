@@ -1,0 +1,1 @@
+const darkModeToggle = document.querySelector('.dark-mode');

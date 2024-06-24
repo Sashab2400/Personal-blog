@@ -7,47 +7,62 @@ body{
 }
 
 .dark-mode {
-  width: 500px;
-  height: 200px;
+  width: 50px;
+  height: 20px;
   position: relative;
   display: block;
   background: white;
-  border-radius: 200px;
+  border-radius: 10px;
   box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
   cursor: pointer;
 }
 
 .dark-mode:after {
   content: "";
-  width: 180px;
-  height: 180px;
+  width: 16px;
+  height: 16px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 2px;
+  right: 2px;
   background: linear-gradient(180deg, pink, hotpink);
-  border-radius: 180px;
+  border-radius: 8px;
   transition: 0.3s;
   box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
-input {
+.dark {
   width: 0;
   height: 0;
   visibility: hidden;
 }
-input:checked + .dark-mode {
+.dark:checked + .dark-mode {
   background: black;
 }
-input:checked + label:after{
-  right: 210px;
-  transform: translateX(-100px);
+.dark:checked + .dark-mode:after{
+  right: 22px;
+  transform: translateX(-10px);
   background: linear-gradient(180deg,blue, pink);
+}
+.dark-mode:active:after{
+  width: 260px;
+}
+.background{
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.dark:checked + .dark-mode + .background {
+  background: #242424;
 }
 .container {
   position: relative;
   text-align: center;
   color: white;
-  
 }
 
 .pink-square {
@@ -55,7 +70,7 @@ input:checked + label:after{
   position: absolute;
   top: 50%;
   right: 70%;
-  transform: translate(0%, 50%);
+  transform: translate(0, 50%);
 }
 
 .text {
@@ -96,7 +111,7 @@ label {
   align-self: flex-start;
 }
 
-content[type="text"],
+.dark[type="text"],
 textarea {
   width: 60%;
   margin: 0 auto;
